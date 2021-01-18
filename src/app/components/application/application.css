@@ -1,0 +1,26 @@
+
+
+.carousel {
+    margin-top: -10px;
+}
+
+.carousel-item {
+    position: relative;
+    padding-top: 45%;
+    color: white;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-item {
+        padding-top: 66%;
+    }
+}
+
+.carousel-item .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}

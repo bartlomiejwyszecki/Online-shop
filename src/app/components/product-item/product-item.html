@@ -1,12 +1,15 @@
 <div class="thumbnail">
-    <img src="http://placehold.it/320x150">
-    <div class="caption">
-      <h4 class="pull-right">{{ product.price }}</h4>
-      <h4><a>{{ product.title }}</a></h4>
-      <p>{{ product.description }}</p>
-    </div>
-    <div>
-      <stars [rating]="product.rating"></stars>
-    </div>
+  <div class="product-item-image" style="
+    background-image: url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmljeWNsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-size: cover;"></div>
+  <div class="caption">
+    <h4 class="pull-right">{{ product.price }}</h4>
+    <h4><a>{{ product.title }}</a></h4>
+    <p>{{ product.description }}</p>
   </div>
+  <div>
+    <stars [rating]="product.rating"></stars>
+  </div>
+</div>
+
   

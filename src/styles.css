@@ -1,2 +1,33 @@
+.carousel {
+  background-color: black;
+}
+
+.carousel .carousel-item {
+  background: black;
+}
+
+.carousel .carousel-item .overlay-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.carousel .carousel-item #oi1 {
+  background-image: url("img/rower1.JPG");
+}
+
+.carousel .carousel-item #oi2 {
+  background-image: url("img/rower2.JPG");
+}
+
+.carousel .carousel-item #oi3 {
+  background-image: url("img/rower3.JPG");
+}
+
 /* You can add global styles to this file, and also import other style files */
 /*# sourceMappingURL=styles.css.map */

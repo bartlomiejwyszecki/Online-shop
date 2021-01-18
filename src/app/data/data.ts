@@ -5,7 +5,8 @@ export class Product {
       public price: number,
       public rating: number,
       public description: string,
-      public categories: Array<string>) { }
+      public categories: Array<string>,
+      public photo?: string) { }
   }
   
   export class ProductService {
