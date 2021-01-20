@@ -30,12 +30,16 @@ html {
             font-family: 'Oxygen', sans-serif;
             label {
                 font-weight: 400;
+                font-size: 0.9em;
             }
             button {
                 font-weight: 700;
-                font-size: 1em;
+                font-size: 0.9em;
                 padding-top: 0.3em;
                 padding-bottom: 0.3em;
+            }
+            input {
+                font-size: 0.8em;
             }
         }
         product-item {
@@ -44,13 +48,20 @@ html {
             font-size: 0.8em;
             h4 {
                 font-weight: 700;
-                font-size: 1.6em;
+                font-size: 1.4em;
+                a {
+                    text-decoration: none;
+                }
             }
         }
         .product-item-image {
             width: 100%;
             padding-top: 75%;
             background-color: pink;
+        }
+        .product-detail-image {
+            width: 100%;
+            padding-top: 75%;
         }
     }
     .carousel {

@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Product, ProductService } from '../../data/data';
+//import { Product, ProductService } from '../../data/data'; - usunąć jak będzie działać
 
 @Component({
     selector: 'auction-app',
@@ -8,9 +8,10 @@ import { Product, ProductService } from '../../data/data';
     encapsulation: ViewEncapsulation.None
 })
 export class ApplicationComponent {
-    products: Array<Product> = [];
+/*  products: Array<Product> = [];
 
     constructor(private productService: ProductService) {
         this.products = this.productService.getProducts();
     }
+*/
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TestComponent } from './main';
 import { BlueDirective, RedText } from "./main";
@@ -12,19 +12,26 @@ import { ProductItemComponent } from "./components/product-item/product-item";
 import { SearchComponent } from "./components/search/search";
 import { StarsComponent } from "./components/stars/stars";
 import { ProductService } from "./data/data";
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HomeComponent } from "./components/home/home";
+import { ProductDetailComponent } from "./components/product-details/product-detail";
 
 
 @NgModule({
   declarations: [
     AppComponent, TestComponent, BlueDirective, RedText, ApplicationComponent,
     CarouselComponent, FooterComponent, NavbarComponent, ProductItemComponent, 
-    SearchComponent, StarsComponent
+    SearchComponent, StarsComponent, HomeComponent, ProductDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'products/:prodTitle', component: ProductDetailComponent }
+    ])
   ],
-  providers: [ ProductService ],
+  providers: [ ProductService, 
+             { provide: LocationStrategy, useClass: HashLocationStrategy } ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
