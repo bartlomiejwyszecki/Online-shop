@@ -4,8 +4,9 @@
     background-size: cover;"></div>
   <div class="caption">
     <h4 class="pull-right">{{ product.price | currency:'PLN '}}</h4>
-    <h4><a [routerLink]="['/products', product.title]">{{ product.title }}</a></h4>
-    <div class="description">
+    
+    <p>{{ product.sale }}</p>
+    <h4><a [routerLink]="['/products', product.id]">{{ product.title }}</a></h4><div class="description">
       {{ product.description }}
     </div>
   </div>

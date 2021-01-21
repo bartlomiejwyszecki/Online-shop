@@ -27,7 +27,7 @@ import { ProductDetailComponent } from "./components/product-details/product-det
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'products/:prodTitle', component: ProductDetailComponent }
+      { path: 'products/:productId', component: ProductDetailComponent }
     ])
   ],
   providers: [ ProductService, 

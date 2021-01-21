@@ -2,6 +2,24 @@
     <div class="product-detail-image" style="
     background-image: url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmljeWNsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
     background-size: cover;"></div>
-    <h4>{{productTitle}}</h4>
-    <p>{{ product.description }}</p>
+    <div class="price">
+        <h4 class="pull-right">Cena: {{ product.price }}</h4>
+        <h4>{{ product.title }}</h4>
+        <p>{{ product.description }}</p>
+    </div>
+    <div class="ratings">
+        <p class="pull-right"><b>Opinie:</b> {{ reviews.length }}</p>
+        <p><stars [rating]="product.rating"></stars></p>
+    </div>
+</div>
+<div class="reviews">
+    <div class="row" *ngFor="let review of reviews">
+        <hr>
+        <div class="col-md-12">
+            <stars [rating]="review.rating"></stars>
+            <span><b>{{ review.user }} </b> </span>
+            <span class="pull-right">({{ review.timeStamp | date: 'shortDate' }})</span>
+            <p>{{ review.comment }}</p>
+        </div>
+    </div>
 </div>

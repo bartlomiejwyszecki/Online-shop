@@ -1,17 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from 'src/app/data/data';
+import { Product, Review, ProductService } from '../../data/data';
 
 @Component({
     selector: 'product-detail',
-    templateUrl: './product-detail.html'
+    templateUrl: './product-detail.html',
+    styleUrls: ['./product-details.scss']
 })
 export class ProductDetailComponent {
-    productTitle: string;
+    product: Product;
+    reviews: Review[];
 
-    constructor(route: ActivatedRoute) {
-        this.productTitle = route.snapshot.params['prodTitle'];
+    constructor(route: ActivatedRoute, productService: ProductService) {
+        let prodId: number = parseInt(route.snapshot.params['productId']);
+        this.product = productService.getProductById(prodId);
+
+        this.reviews = productService.getReviewsForProduct(this.product.id);
     }
-
-    @Input() product!: Product;
 }
