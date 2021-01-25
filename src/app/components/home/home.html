@@ -1,5 +1,14 @@
 <div class="row">
-    <div *ngFor="let prod of products" class="col-sm-4 col-lg-4 col-md-4">
+    <div class="col-md-12">
+        <div class="form-group">
+            <input placeholder="Filtruj produkty według nazwy" class="form-control" 
+                type="text" [formControl]='titleFilter'>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let prod of products | filter:'title':filterCriteria" class="col-sm-4 col-lg-4 col-md-4">
         <product-item [product]="prod"></product-item>
     </div>
 </div>

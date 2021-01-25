@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +23,9 @@
     "@angular/platform-browser-dynamic": "~11.0.4",
     "@angular/router": "~11.0.4",
     "bundle": "^2.1.0",
+    "node-gyp": "^7.1.2",
     "popper.js": "^1.16.1",
+    "rebuild": "^0.1.2",
     "rxjs": "~6.6.0",
     "systemjs": "^6.8.3",
     "tslib": "^2.0.0",

@@ -5,3 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './search.html'
 })
 export class SearchComponent { }
+
+
