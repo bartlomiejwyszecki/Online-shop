@@ -1,8 +1,6 @@
 <p>
-    <span *ngFor="let star of stars"
-          class="starrating glyphicon glyphicon-star"
-          [class.glyphicon-star-empty]="star">
-    </span>
+    <ngb-rating [max]="count" [(rate)]="rating" [readonly]="false"></ngb-rating>
     <span><strong>Ocena:</strong> {{ rating }}</span>
-  </p>
-  
+</p>
+
+	

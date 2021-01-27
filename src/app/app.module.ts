@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './main';
@@ -18,6 +19,7 @@ import { ProductService } from "./data/data";
 import { HomeComponent } from "./components/home/home";
 import { ProductDetailComponent } from "./components/product-details/product-detail";
 import { FilterPipe } from './components/filter/filter';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { FilterPipe } from './components/filter/filter';
       { path: '', component: HomeComponent },
       { path: 'products/:productId', component: ProductDetailComponent }
     ]),
-    ReactiveFormsModule
+    ReactiveFormsModule, FormsModule,
+    MDBBootstrapModule.forRoot(),
+    NgbModule
   ],
   providers: [ ProductService, 
              { provide: LocationStrategy, useClass: HashLocationStrategy } ],

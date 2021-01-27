@@ -54,6 +54,18 @@ html {
                 }
             }
         }
+        .pdetail {
+            font-family: 'Oxygen', sans-serif;
+            .rname {
+                font-weight: 700;
+            }
+            .addcomment {
+                font-family: 'Oxygen', sans-serif;
+                h4 {
+                    font-weight: 700; 
+                }
+            }
+        }
         .product-item-image {
             width: 100%;
             padding-top: 75%;
@@ -150,3 +162,6 @@ html {
     }
 }
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
