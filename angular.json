@@ -47,7 +47,8 @@
               "node_modules/bootstrap/js/dist/carousel.js",
               "node_modules/popper.js/dist/popper.js",
               "node_modules/chart.js/dist/Chart.js",
-              "node_modules/hammerjs/hammer.min.js"
+              "node_modules/hammerjs/hammer.min.js",
+              "src/js/navbar.js"
             ]
           },
           "configurations": {
