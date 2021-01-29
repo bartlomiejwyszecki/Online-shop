@@ -62,6 +62,9 @@ html {
     .carousel {
         background-color: black;
         margin-top: -75px;
+        .carousel-indicators {
+            z-index: 8;
+        }
         .carousel-item {
             position: relative;
             padding-top: 50%;
@@ -98,7 +101,7 @@ html {
                 top: 0;
                 background-position: center;
                 background-size: cover;
-                opacity: 0.6;
+                opacity: 0.5;
             }
             #oi1 {
                 background-image: url('img/rower3.JPG');

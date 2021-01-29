@@ -38,6 +38,19 @@
         this.classList.toggle('animateburger');
         });
     });
- </script>
+  </script>
+  <script>
+    window.addEventListener('scroll', () => {
+      let nav = document.querySelector('nav');
+      let burger = document.querySelector(".navbarlinks");
+
+      if (window.innerWidth < 768) {
+        nav.classList.toggle('scrolling', window.scrollY > 150);
+        burger.classList.toggle('scrolling', window.scrollY > 150);
+      } else {
+        nav.classList.toggle('scrolling', window.scrollY > 150);
+      }
+    });
+  </script>
 </body>
 </html>
